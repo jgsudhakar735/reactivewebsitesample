@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.loginGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    /* "loginBox1" */
+    "loginBox"
+    /* "loginBox2"; */
+    ;
+  justify-content: center;
+  place-items: center;  
+}
+
+#loginBox {
+  grid-area: loginBox;
+  border-radius: 10px;
+  background-color: rgba(191, 216, 227, .4);
+  border: 1px solid rgba(191, 216, 227, .8);
+  padding: 10px;
+}
+
+.login {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "headerBox"
+    "inputBox"
+    "submitBox";
+  grid-column-end: span 2;
+  width: auto;
+}
+.login > div {
+  padding: 5px 0;
+}
+
+input[type="submit"] {
+  border: 1px solid rgba(191, 216, 227, .8);
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(54, 134, 169);
+  font-size: 110%;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid rgba(191, 216, 227, .8);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 110%;
+  width: 100%;
+}
+
+#headerBox {
+  grid-area: headerBox;
+}
+#inputBox {
+  grid-area: inputBox;
+}
+#submitBox {
+  grid-area: submitBox;
+}
+
+#loginBox1 {
+  /* background-color: cadetblue; */
+  grid-area: loginBox1;
+}
+
+#loginBox2 {
+  /* background-color: cornflowerblue; */
+  grid-area: loginBox2;
+}
+
+@media only screen and (max-width: 550px) {
+  .loginGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      /* "loginBox1" */
+      "loginBox"
+      /* "loginBox2"; */
+  }
+
+  .login {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "headerBox"
+      "inputBox"
+      "submitBox";
+    border: 1px;
+    color: black;
+  }
+}
+
+.actions a {
+  font-size: 80%;
+}

@@ -1,0 +1,118 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.4fr 4fr 0.4fr;
+  grid-template-areas:
+    "header header header"
+    "main main logincard"
+    "footer footer footer";
+  /* gap: 0.2rem; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  /* text-transform: uppercase; */
+  font-size: medium;
+  text-align: center;
+}
+
+.companyName {
+  text-transform: none;
+  font-size: small;
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.navbar-logo {
+  color: rgb(5, 5, 5);
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: stretch;
+}
+
+header {
+  background-color: #d8cfd0;
+  grid-area: header;
+  color: rgb(5, 5, 5);
+  /* background-image: url(../../images/headerbg.jpg); */
+  /* border-radius: var(--main-radius); */
+  /* padding: var(--main-padding); */
+  /* align-items: stretch; */
+}
+
+.header {
+  display: grid;
+  grid-template-areas: "logo nav";
+}
+.Nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  align-items: center;
+  justify-items: center;
+}
+.Logo {
+  grid-area: logo;
+  height: 70px;
+}
+
+main {
+  background-color: rgb(202, 189, 189);
+  grid-area: main;
+  /* border-radius: var(--main-radius); */
+  padding: var(--main-padding);
+  /* background-image: url('../../images/download.jpg'); */
+}
+
+#lgcontainer {
+  background-color: rgb(202, 189, 189);
+  grid-area: lgcontainer;
+  /* border-radius: var(--main-radius); */
+  /* padding: var(--main-padding); */
+}
+#logincard {
+  background-color: rgb(202, 189, 189);
+  grid-area: logincard;
+  display: grid;
+  /* border-radius: var(--main-radius); */
+  /* padding: var(--main-padding); */
+}
+
+footer {
+  background-color: #d8cfd0;
+  /* background-image: url(../../images/headerbg.jpg); */
+  grid-area: footer;
+  color: rgb(5, 5, 5);
+  /* border-radius: var(--main-radius); */
+  /* padding: var(--main-padding); */
+  text-transform: none;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 1fr 0.4fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "main"
+      "logincard"
+      "footer";
+    /* grid-row-gap: 0.2rem; */
+  }
+}
