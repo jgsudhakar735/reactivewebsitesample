@@ -1,87 +1,92 @@
 :root {
-    --main-radius: 5px;
-    --main-padding: 5px;
-  }
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+.container1 {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1.2fr 0.4fr;
+  grid-template-areas:
+    "nav1 nav1 nav1 nav1"
+    "sidebar1 main1 main1 main1"
+    "sidebar1 container11 container21 container31"
+    "sidebar1 footer1 footer1 footer1";
+  gap: 0.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: medium;
+  color: red;
+  text-align: center;
+}
+
+#nav1 {
+  grid-area: nav1;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  align-items: stretch;
+  background-color: #d8cfd0;
+  color: rgb(5, 5, 5);
+  background-image: url("../../images/header.png");
+}
+#main1 {
+  background-color: rgb(212, 67, 67);
+  grid-area: main1;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+  background-image: url("../../images/background.jpg");
+}
+#sidebar1 {
+  background-color: rgb(18, 160, 243);
+  grid-area: sidebar1;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+#container11 {
+  background-color: rgb(223, 6, 6);
+  grid-area: container11;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+#container21 {
+  background-color: rgb(202, 189, 189);
+  grid-area: container21;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+#container31 {
+  background-color: rgb(78, 14, 14);
+  grid-area: container31;
+  border-radius: var(--main-radius);
+  padding: var(--main-padding);
+}
+#footer1 {
+  background-color: #d8cfd0;
+  grid-area: footer1;
+  color: rgb(5, 5, 5);
+  text-transform: none;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width: 550px) {
   .container1 {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.4fr 1.5fr 1.2fr 0.4fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-      "nav1 nav1 nav1 nav1"
-      "sidebar1 main1 main1 main1"
-      "sidebar1 container11 container21 container31"
-      "sidebar1 footer1 footer1 footer1";
-    gap: 0.2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: medium;
-    color: red;
-    text-align: center;
+      "nav1"
+      "sidebar1"
+      "main1"
+      "container11"
+      "container21"
+      "container31"
+      "footer1";
+    grid-row-gap: 0.2rem;
   }
-  
-  #nav1 {
-    background-color: black;
-    grid-area: nav1;
-    color: white;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-    align-items: stretch;
-  }
-  #main1 {
-    background-color: rgb(212, 67, 67);
-    grid-area: main1;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-  }
-  #sidebar1 {
-    background-color: rgb(18, 160, 243);
-    grid-area: sidebar1;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-  }
-  #container11 {
-    background-color: rgb(223, 6, 6);
-    grid-area: container11;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-  }
-  #container21 {
-    background-color: rgb(202, 189, 189);
-    grid-area: container21;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-  }
-  #container31 {
-    background-color: rgb(78, 14, 14);
-    grid-area: container31;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-  }
-  #footer1 {
-    background-color: rgba(8, 1, 1, 0.993);
-    grid-area: footer1;
-    color: whitesmoke;
-    border-radius: var(--main-radius);
-    padding: var(--main-padding);
-  }
-  
-  @media only screen and (max-width: 550px) {
-    .container1 {
-      display: grid;
-      height: 100vh;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-        "nav1"
-        "sidebar1"
-        "main1"
-        "container11"
-        "container21"
-        "container31"
-        "footer1";
-      grid-row-gap: 0.2rem;
-    }
-  }
-  
+}

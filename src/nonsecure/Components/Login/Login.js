@@ -1,12 +1,10 @@
 import React from 'react'
 import './Login.css'
-import UserIcon from '@material-ui/icons/SupervisedUserCircleRounded'
-import PwdIcon from '@material-ui/icons/VpnKey'
 
 function Login() {
   return (
     <div className="loginGrid">
-      <div id="loginBox1"></div>
+      <div id="loginBox1">Sample Text Goes Here</div>
       <div id="loginBox">
         <form className="login" action="" method="post">
 
