@@ -1,0 +1,14 @@
+.settingsMenu {
+    list-style: none;
+}
+.set-nav-item {
+    /* background-image: url('../../../images/background.jpg'); */
+    border-radius: 10px;
+    height: 50px;
+    /* padding-top: 10px; */
+    text-decoration: none;
+}
+
+.set-nav-link {
+    text-decoration: none;
+}

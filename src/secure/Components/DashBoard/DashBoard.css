@@ -1,6 +1,6 @@
 :root {
-  --main-radius: 5px;
-  --main-padding: 5px;
+  --main-radius: 0px;
+  --main-padding: 0px;
 }
 .container1 {
   display: grid;
@@ -12,10 +12,10 @@
     "sidebar1 main1 main1 main1"
     "sidebar1 container11 container21 container31"
     "sidebar1 footer1 footer1 footer1";
-  gap: 0.2rem;
+  /* gap: 0.2rem; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: medium;
   color: red;
   text-align: center;
@@ -28,20 +28,23 @@
   align-items: stretch;
   background-color: #d8cfd0;
   color: rgb(5, 5, 5);
-  background-image: url("../../images/header.png");
+  background-image: url("../../../images/header.png");
 }
 #main1 {
   background-color: rgb(212, 67, 67);
   grid-area: main1;
   border-radius: var(--main-radius);
   padding: var(--main-padding);
-  background-image: url("../../images/background.jpg");
+  background-image: url("../../../images/background.jpg");
 }
 #sidebar1 {
   background-color: rgb(18, 160, 243);
   grid-area: sidebar1;
-  border-radius: var(--main-radius);
-  padding: var(--main-padding);
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  /* border-radius: var(--main-radius); */
+  /* padding: var(--main-padding); */
 }
 #container11 {
   background-color: rgb(223, 6, 6);
@@ -87,6 +90,6 @@
       "container21"
       "container31"
       "footer1";
-    grid-row-gap: 0.2rem;
+    /* grid-row-gap: 0.2rem; */
   }
 }

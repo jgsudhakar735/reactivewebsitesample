@@ -1,0 +1,86 @@
+.postheader {
+  grid-area: postheaderlogo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: start;
+  padding-left: 10px;
+}
+
+.postloginheader {
+  background: #d8cfd0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "postheaderlogo settingarea";
+  background-image: url("../../../images/header.png");
+  place-content: center;
+  height: 70px;
+}
+
+.settings {
+  grid-area: settingarea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: end;
+  padding-right: 10px;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.headernav-item {
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+
+.headernav-item:hover {
+  border-bottom: 2px solid #cc1d1d;
+}
+
+.headernav-links {
+  color: lightslategrey;
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: black;
+  list-style: none;
+}
+
+.headermenupo {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+  position: absolute;
+  top: 60px;
+  right: -100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  list-style: none;
+  background-image: url("../../../images/header.png");
+}
+
+.headermenupo.active {
+  right: 0;
+  opacity: 1;
+  transition: all 0.6s ease;
+  z-index: 1;
+  list-style: none;
+  background-image: url("../../../images/header.png");
+}
+
+/* Menu icon enable on the mobile view only */
+.postmenu-icon {
+  display: none;
+}

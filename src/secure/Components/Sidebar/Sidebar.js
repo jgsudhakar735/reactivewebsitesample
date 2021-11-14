@@ -1,9 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { POST_LOGIN_MENU } from '../Menu/PostLoginMenu'
+import './Sidebar.css'
 
 function Sidebar() {
     return (
         <div>
-            This si Side Bar component
+            <ul className="settingsMenu">
+                {
+                    POST_LOGIN_MENU.map(menuData => {
+                        return <li className="set-nav-item">
+                            <Link to={menuData.path} className="set-nav-link"> {menuData.menuName} </Link>
+                        </li>
+                    })
+                }
+            </ul>
         </div>
     )
 }
