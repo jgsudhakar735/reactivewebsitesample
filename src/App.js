@@ -21,6 +21,7 @@ function App() {
         <Route path="forgot" element={<ForgotPassword />} />
       </Route>
       <Route path="dashboard" element={<DashBoard />} >
+         <Route path="" element={<Home></Home>} />
          <Route path= "home" element= {<Home></Home>}></Route>
          <Route path= "users" element= {<Users/>}></Route>
          <Route path= "registration" element= {<Registration/>}></Route>

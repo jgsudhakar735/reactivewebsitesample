@@ -10,7 +10,7 @@ function Sidebar() {
                 {
                     POST_LOGIN_MENU.map(menuData => {
                         return <li className="set-nav-item">
-                            <Link to={menuData.path} className="set-nav-link"> {menuData.menuName} </Link>
+                            <Link to={menuData.path} className="set-nav-link" id={menuData.menuId} key= {menuData.menuId}> {menuData.menuName} </Link>
                         </li>
                     })
                 }

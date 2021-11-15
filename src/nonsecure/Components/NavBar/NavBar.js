@@ -25,7 +25,7 @@ function NavBar() {
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         {
                             PRE_LOGIN_MENU.map(data => {
-                               return  <li className='nav-item'><Link to={data.path} className='nav-links' onClick={closeMobileMenu} id= {data.menuId}>{data.menuName}</Link> </li>
+                               return  <li className='nav-item'><Link to={data.path} className='nav-links' onClick={closeMobileMenu} id= {data.menuId} key={data.menuId}>{data.menuName}</Link> </li>
                             })
                         }
                     </ul>

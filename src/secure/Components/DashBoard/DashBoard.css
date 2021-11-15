@@ -6,7 +6,7 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.5fr 1.2fr 0.4fr;
+  grid-template-rows: 0.4fr 1.5fr 0.3fr 1.4fr;
   grid-template-areas:
     "nav1 nav1 nav1 nav1"
     "sidebar1 main1 main1 main1"
@@ -16,9 +16,9 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 800;
   /* text-transform: uppercase; */
-  font-size: medium;
+  /* font-size: medium; */
   color: red;
-  text-align: center;
+  /* text-align: center; */
 }
 
 #nav1 {
@@ -36,6 +36,11 @@
   border-radius: var(--main-radius);
   padding: var(--main-padding);
   background-image: url("../../../images/background.jpg");
+  overflow-y: scroll;
+  height: 80vh;
+  scrollbar-width: 5px;
+  scrollbar-3dlight-color: black;
+  scrollbar-arrow-color: blue;
 }
 #sidebar1 {
   background-color: rgb(18, 160, 243);
@@ -84,7 +89,7 @@
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "nav1"
-      "sidebar1"
+      "main1"
       "main1"
       "container11"
       "container21"

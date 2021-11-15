@@ -1,14 +1,32 @@
 .settingsMenu {
     list-style: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "menupostlg";
+    align-items: center;
+    justify-content: center;
+    place-content: space-around;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .set-nav-item {
-    /* background-image: url('../../../images/background.jpg'); */
+    background-image: url('../../../images/background.jpg');
     border-radius: 10px;
-    height: 50px;
-    /* padding-top: 10px; */
+    height: 30px;
+    padding-top: 5px;
     text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+    grid-area: menupostlg;
 }
 
 .set-nav-link {
     text-decoration: none;
+}
+
+/* Mobile View CSS */
+@media only screen and (max-width: 550px) {
+   .settingsMenu {
+       display: none;
+   }
 }

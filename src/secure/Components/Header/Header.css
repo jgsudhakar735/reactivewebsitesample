@@ -84,3 +84,13 @@
 .postmenu-icon {
   display: none;
 }
+
+/* Mobile View CSS */
+@media only screen and (max-width: 550px) {
+  .postmenu-icon {
+    padding-right: 15px;
+    transition: all 0.5s ease;
+    display: block;
+  }
+  /* Settings Menu on Mobile View */
+}
