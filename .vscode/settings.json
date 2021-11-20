@@ -2,8 +2,8 @@
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
     },
+    "emmet.excludeLanguages": [],
     "emmet.showSuggestionsAsSnippets": true,
     "html-css-class-completion.enableEmmetSupport": true,
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.excludeLanguages": []
+    "emmet.triggerExpansionOnTab": true
 }

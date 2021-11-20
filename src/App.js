@@ -10,6 +10,7 @@ import ForgotPassword from './nonsecure/Components/forgotpwd/ForgotPassword';
 import Users from './secure/Components/Users/Users';
 import Home from './secure/Components/Home/Home';
 import Registration from './secure/Components/Registration/Registration';
+import ChangePassword from './secure/Components/ChangePassword/ChangePassword';
 function App() {
   return (
     <Routes>
@@ -20,11 +21,13 @@ function App() {
         <Route path="services" element={<Services />} />
         <Route path="forgot" element={<ForgotPassword />} />
       </Route>
+      
       <Route path="dashboard" element={<DashBoard />} >
          <Route path="" element={<Home></Home>} />
          <Route path= "home" element= {<Home></Home>}></Route>
          <Route path= "users" element= {<Users/>}></Route>
          <Route path= "registration" element= {<Registration/>}></Route>
+         <Route path="chgpwd" element = {<ChangePassword/>}></Route>
       </Route>
     </Routes>
   );

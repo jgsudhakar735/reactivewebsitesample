@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import { Redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { UserProvider } from '../../../secure/Components/Context/UserContext';
 import './Login.css'
 
 function Login() {
 
   const [name, setName] = useState({ username: '', password: '' })
-  const [redirect, setRedirect] = useState(false)
   const navigate = useNavigate();
+  const [error, setError] = useState(false)
 
   const handleSubmit = (event) => {
+    setError(false)
     event.preventDefault();
     const data = new FormData(event.target);
     let uname = data.get("username");
@@ -17,8 +19,12 @@ function Login() {
     console.log(data)
     // redirecting to dash board
     if (uname == 'sudha' && pwd == 'sudha') {
+      // setting the user id in the context
+      window.name = uname
       // navigate to the next window
-      navigate("/dashboard/users")
+      navigate("/dashboard/home")
+    } else {
+      setError(true)
     }
   }
 
@@ -41,6 +47,12 @@ function Login() {
             <input type="submit" name="login" value="Login" /> <br />
             <a href="/forgot" >I forgot my password</a>
           </div>
+          {
+            error ?
+              <div><label style={{ color: "red" }}>Invalid Credentials!</label></div>
+              :
+              ''
+          }
         </form>
         <form>
 

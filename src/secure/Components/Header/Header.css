@@ -7,6 +7,7 @@
   text-align: center;
   justify-content: start;
   padding-left: 10px;
+  height: 55px;
 }
 
 .postloginheader {
@@ -17,7 +18,7 @@
   grid-template-areas: "postheaderlogo settingarea";
   background-image: url("../../../images/header.png");
   place-content: center;
-  height: 70px;
+  height: 55px;
 }
 
 .settings {
@@ -29,6 +30,7 @@
   text-align: center;
   justify-content: end;
   padding-right: 10px;
+  height: 55px;
 }
 
 .show {
@@ -62,7 +64,7 @@
   flex-direction: column;
   width: 17%;
   position: absolute;
-  top: 60px;
+  top: 38px;
   right: -100%;
   opacity: 1;
   transition: all 0.5s ease;
@@ -85,6 +87,33 @@
   display: none;
 }
 
+.plnav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: end;
+  display: none;
+}
+
+.plnav-item {
+  border-bottom: 2px solid transparent;
+}
+
+.plnav-item:hover {
+  border-bottom: 2px solid #cc1d1d;
+}
+
+.plnav-links {
+  color: lightslategrey;
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: black;
+}
+
 /* Mobile View CSS */
 @media only screen and (max-width: 550px) {
   .postmenu-icon {
@@ -93,4 +122,45 @@
     display: block;
   }
   /* Settings Menu on Mobile View */
+  .headermenupo.active {
+    right: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+    list-style: none;
+    background-image: url("../../../images/header.png");
+  }
+  .headermenupo {
+    display: grid;
+    flex-direction: column;
+    width: 60%;
+    position: absolute;
+    top: 39px;
+    right: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+    list-style: none;
+    background-image: url("../../../images/header.png");
+  }
+  
+  .plnav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 39px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    display: block;
+  }
+  
+  .plnav-menu.active {
+    background: #4E95C9;
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
 }
