@@ -33,7 +33,7 @@ function ContactUs() {
                 </FormControl>
                 <br />
                 <FormControl>
-                    <Button variant="contained"> Submit</Button>
+                    <Button variant="contained"> Contact Me </Button>
                 </FormControl>
 
             </FormGroup>

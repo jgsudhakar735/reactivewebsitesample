@@ -5,7 +5,7 @@ import UserLogo from '@material-ui/icons/AccountCircleOutlined'
 import { Link, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { POST_LOGIN_MENU } from '../Menu/PostLoginMenu';
-import { UserConsumer } from '../Context/UserContext';
+import UserState from '../../../common/Components/Guard/UserState';
 function Header() {
 
     const navigate = useNavigate();
@@ -20,6 +20,8 @@ function Header() {
     }
 
     const logout = () => {
+        localStorage.removeItem("loginStatus")
+        localStorage.removeItem("loginUName")
         navigate("/")
     }
 
@@ -43,7 +45,7 @@ function Header() {
                             }
                         </ul>
                     </div>
-                    <div> <i> {window.name} </i> </div>
+                    <div> <i> {localStorage.getItem("loginUName")} </i> </div>
                     <div><UserLogo fontSize="large" onClick={handleClick}></UserLogo></div>
                     {click ?
                         <ul className={click ? "headermenupo active" : "headermenupo"} onMouseLeave={handleClick}>

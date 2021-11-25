@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { UserProvider } from '../../../secure/Components/Context/UserContext';
+import UserState from '../../../common/Components/Guard/UserState';
 import './Login.css'
 
 function Login() {
@@ -19,8 +19,10 @@ function Login() {
     console.log(data)
     // redirecting to dash board
     if (uname == 'sudha' && pwd == 'sudha') {
-      // setting the user id in the context
-      window.name = uname
+      // setting the user id and login status in the local storage
+      localStorage.setItem("loginStatus",true)
+      localStorage.setItem("loginUName",uname)
+
       // navigate to the next window
       navigate("/dashboard/home")
     } else {
